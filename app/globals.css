@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 255 250 252;
+  --card: 255 255 255;
+  --text: 24 24 27;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0px); opacity: .85; }
+  50% { transform: translateY(-8px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: .85; }
+}
+
+.floaty {
+  animation: floaty 3.6s ease-in-out infinite;
+}
+
+.stf__parent {
+  overflow: visible !important;
+}
+.stf__wrapper {
+  overflow: visible !important;
+}
+.stf__block {
+  overflow: visible !important;
+}

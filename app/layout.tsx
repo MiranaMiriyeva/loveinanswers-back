@@ -14,8 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://loveinanswers.site"),
 
   icons: {
-    icon: "/favicon.ico",                // və ya "/loveinanswersminilogo.png"
-    apple: "/loveinanswersminilogo.png", // istəsən
+    icon: "/loveinanswersminilogo.png",            
   },
 
   openGraph: {

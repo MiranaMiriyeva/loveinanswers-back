@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { Lang } from "@/app/i18n/dictionaries";
 import { t } from "@/app/i18n/dictionaries";
+import { Eye, EyeOff } from "lucide-react";
 
 function getLangFromCookie(): Lang {
   if (typeof document === "undefined") return "az";
@@ -65,6 +66,8 @@ export default function RegisterPage() {
   const R = dict.registerUi; // ✅ aşağıda tərcümələri verirəm
 
   const [serverErr, setServerErr] = useState<string | null>(null);
+  const [showPass, setShowPass] = useState(false);
+const [showPass2, setShowPass2] = useState(false);
 
   // ✅ schema is language-aware
   const schema = useMemo(
@@ -163,38 +166,50 @@ export default function RegisterPage() {
             </div>
 
             {/* PASSWORD */}
-            <div>
-              <label className="text-xs font-medium text-zinc-700">{R.passLabel}</label>
-              <input
-                className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-rose-200 ${
-                  errors.password ? "border-red-300" : "border-zinc-200"
-                }`}
-                placeholder={R.passPh}
-                type="password"
-                autoComplete="new-password"
-                {...register("password")}
-              />
-              {errors.password && (
-                <p className="mt-1 text-xs text-red-600">{errors.password.message}</p>
-              )}
-            </div>
+       <div className="relative">
+  <input
+    className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 pr-12 text-sm outline-none focus:ring-2 focus:ring-rose-200 ${
+      errors.password ? "border-red-300" : "border-zinc-200"
+    }`}
+    placeholder={R.passPh}
+    type={showPass ? "text" : "password"}
+    autoComplete="new-password"
+    {...register("password")}
+  />
+
+  <button
+    type="button"
+    onClick={() => setShowPass((v) => !v)}
+    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-zinc-500 hover:bg-rose-50 hover:text-rose-700"
+    aria-label={showPass ? "Hide password" : "Show password"}
+  >
+    {showPass ? <EyeOff size={18} /> : <Eye size={18} />}
+  </button>
+</div>
+
 
             {/* CONFIRM PASSWORD */}
-            <div>
-              <label className="text-xs font-medium text-zinc-700">{R.pass2Label}</label>
-              <input
-                className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-rose-200 ${
-                  errors.confirmPassword ? "border-red-300" : "border-zinc-200"
-                }`}
-                placeholder={R.pass2Ph}
-                type="password"
-                autoComplete="new-password"
-                {...register("confirmPassword")}
-              />
-              {errors.confirmPassword && (
-                <p className="mt-1 text-xs text-red-600">{errors.confirmPassword.message}</p>
-              )}
-            </div>
+        <div className="relative">
+  <input
+    className={`mt-2 w-full rounded-2xl border bg-white px-4 py-3 pr-12 text-sm outline-none focus:ring-2 focus:ring-rose-200 ${
+      errors.confirmPassword ? "border-red-300" : "border-zinc-200"
+    }`}
+    placeholder={R.pass2Ph}
+    type={showPass2 ? "text" : "password"}
+    autoComplete="new-password"
+    {...register("confirmPassword")}
+  />
+
+  <button
+    type="button"
+    onClick={() => setShowPass2((v) => !v)}
+    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-zinc-500 hover:bg-rose-50 hover:text-rose-700"
+    aria-label={showPass2 ? "Hide password" : "Show password"}
+  >
+    {showPass2 ? <EyeOff size={18} /> : <Eye size={18} />}
+  </button>
+</div>
+
 
             {/* SERVER ERROR */}
             {serverErr && (

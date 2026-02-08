@@ -131,6 +131,11 @@ seedQ1o2: "Park 🌿",
 seedQ1o3: "Universitet / iş 🏫",
 seedQ1o4: "Iş",
 seedQ2: "Əlini ilk dəfə tutduğum gün hansı gün idi? (məs: 14 Fevral)",
+kofeBadge: "Mira-ya dəstək",
+kofeTitle: "Əgər məmnun qaldınızsa, mənə bir kofe ala bilərsiniz 💗",
+kofeSub: "kofe.al/@mira — bir kliklə dəstək ✨",
+kofeOpen: "Aç",
+
 
 },
 enterUi: {
@@ -383,6 +388,11 @@ seedQ1o2: "Park / walk 🌿",
 seedQ1o3: "University / work 🏫",
 seedQ1o4: "Somewhere random 😄",
 seedQ2: "What day did I hold your hand for the first time? (e.g. Feb 14)",
+kofeBadge: "Support Mira",
+kofeTitle: "If you enjoyed it, you can buy me a coffee 💗",
+kofeSub: "kofe.al/@mira — support with one click ✨",
+kofeOpen: "Open",
+
 
 },
 enterUi: {
@@ -634,6 +644,11 @@ seedQ1o2: "Парк / прогулка 🌿",
 seedQ1o3: "Университет / работа 🏫",
 seedQ1o4: "Где-то случайно 😄",
 seedQ2: "В какой день я впервые взял(а) тебя за руку? (например: 14 февраля)",
+kofeBadge: "Поддержать Миру",
+kofeTitle: "Если вам понравилось, вы можете купить мне кофе 💗",
+kofeSub: "kofe.al/@mira — поддержка в один клик ✨",
+kofeOpen: "Открыть",
+
 
 },
 enterUi: {

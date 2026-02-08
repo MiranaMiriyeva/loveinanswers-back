@@ -6,8 +6,12 @@ import { Footer } from "@/app/components/Footer";
 
 export const metadata: Metadata = {
   title: "LoveInAnswers",
-  description: "Best couple test + gift book"
+  description: "Best couple test + gift book",
+  icons: {
+    icon: "/loveinanswersminilogo.png",
+  },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

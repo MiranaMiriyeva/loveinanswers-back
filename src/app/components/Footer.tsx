@@ -40,14 +40,14 @@ export function Footer() {
                 Email
               </a>
               <a
-                href="https://github.com/miriyeva-mira"
+                href="https://github.com/MiranaMiriyeva"
                 target="_blank"
                 className="text-sm text-rose-700 hover:underline"
               >
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/miriyeva-mira"
+                href="https://www.linkedin.com/in/miran%C9%99-miriyeva?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnxubsADkPnWHr04FB4iTX1S3Nf23j_LevrjwODRvXt04etJDUjGzpFV887cA_aem_qEpyPoCBT_O9rjpWjX-Q6Q"
                 target="_blank"
                 className="text-sm text-rose-700 hover:underline"
               >

@@ -323,6 +323,34 @@ export default function DashboardPage() {
               {err}
             </div>
           )}
+          {/* ☕️ Coffee support */}
+<a
+  href="https://kofe.al/@mira"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group mt-4 block overflow-hidden rounded-3xl border border-rose-100 bg-white/75 p-4 shadow-sm transition hover:bg-white hover:shadow"
+>
+  <div className="flex items-start justify-between gap-3">
+    <div>
+      <div className="inline-flex items-center gap-2 rounded-full bg-rose-600 px-3 py-1 text-xs font-medium text-white">
+        ☕️ {D.kofeBadge}
+      </div>
+
+      <div className="mt-2 text-sm font-semibold text-zinc-900">
+        {D.kofeTitle}
+      </div>
+
+      <div className="mt-1 text-xs text-zinc-600">
+        {D.kofeSub}
+      </div>
+    </div>
+
+    <div className="mt-1 shrink-0 rounded-full border bg-white px-3 py-2 text-xs text-zinc-700 group-hover:bg-rose-50">
+      {D.kofeOpen} ↗
+    </div>
+  </div>
+</a>
+
         </div>
       </section>
 
